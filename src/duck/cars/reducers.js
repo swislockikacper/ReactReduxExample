@@ -2,7 +2,7 @@ import types from "./types";
 
 const INITIAL_STATE = {
     listName = "Cars",
-    list: []
+    list: ["Dodge Challenger", "Toyota Supra"]
 };
 
 const carsReducer = (state = INITIAL_STATE, action) => {
