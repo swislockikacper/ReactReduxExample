@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <BrandForm />
       <BrandsContainer />
-      <CarForm />
+      <CarForm/>
       <CarsContainer />
     </div>
   );

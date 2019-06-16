@@ -1,7 +1,14 @@
 import React from "react";
+import { connect } from "react-redux";
 
-function BrandsContainer() {
-  return <div />;
+const BrandsContainer = ({brands}) => {
+  return <ul>
+    {brands.list.map(car => <li>{car}</li>)}
+  </ul>;
 }
 
-export default BrandsContainer;
+const mapStateToProps = state => ({
+  brands: state.brands
+});
+
+export default connect(mapStateToProps)(BrandsContainer);

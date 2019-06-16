@@ -1,7 +1,7 @@
 import types from "./types";
 
 const INITIAL_STATE = {
-    listName = "Cars",
+    listName: "Cars",
     list: ["Dodge Challenger", "Toyota Supra"]
 };
 
