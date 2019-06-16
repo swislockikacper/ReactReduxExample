@@ -15,7 +15,7 @@ const BrandForm = ({ add }) => {
 
   return (
     <form className="form" onSubmit={addBrand}>
-      <input className="txt-input" ref={brandInput} />
+      <input className="txt-input" ref={brandInput} required/>
       <button className="accept-btn" type="submit">Add brand</button>
     </form>
   );

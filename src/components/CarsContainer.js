@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import actions from "../duck/cars/actions";
 import "./style/container.css";
 
-const CarsContainer = ({ cars, reset }) => {
+const CarsContainer = ({ cars, reset, removeItem }) => {
   return (
     <div>
       <p className="title">{cars.listName}</p>
@@ -12,6 +12,9 @@ const CarsContainer = ({ cars, reset }) => {
         {cars.list.map(car => (
           <li className="element" key={car.key}>
             {car.name}
+            <button className="rm-btn" onClick={() => removeItem(car.key)}>
+              X
+            </button>
           </li>
         ))}
       </ul>
@@ -28,7 +31,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  reset: () => dispatch(actions.reset())
+  reset: () => dispatch(actions.reset()),
+  removeItem: (key) => dispatch(actions.remove(key))
 });
 
 export default connect(

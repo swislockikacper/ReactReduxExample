@@ -10,7 +10,13 @@ const reset = item => ({
   item
 });
 
+const remove = item => ({
+  type: types.REMOVE_CAR,
+  item
+});
+
 export default {
   add,
-  reset
+  reset,
+  remove
 };

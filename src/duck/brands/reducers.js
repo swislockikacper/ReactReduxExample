@@ -9,7 +9,7 @@ const brandsReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case types.ADD_BRAND:
       const item = {
-        key: state.list.length,
+        key: state.list.length + 1,
         name: action.item
       };
 
@@ -21,6 +21,11 @@ const brandsReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         list: []
+      };
+    case types.REMOVE_BRAND:
+      return {
+        ...state,
+        list: state.list.filter(item => item.key !== action.item)
       };
     default:
       return state;

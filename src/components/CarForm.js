@@ -14,7 +14,7 @@ const CarForm = ({add}) => {
   }
 
   return <form className="form" onSubmit={addCar}>
-    <input className="txt-input" ref={carInput}/>
+    <input className="txt-input" ref={carInput} required/>
     <button className="accept-btn" type="submit">Add car</button>
   </form>;
 }

@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import actions from "../duck/brands/actions";
 import "./style/container.css";
 
-const BrandsContainer = ({ brands, reset }) => {
+const BrandsContainer = ({ brands, reset, removeItem }) => {
   return (
     <div>
       <p className="title">{brands.listName}</p>
@@ -11,7 +11,10 @@ const BrandsContainer = ({ brands, reset }) => {
       <ul className="list">
         {brands.list.map(brand => (
           <li className="element" key={brand.key}>
-            {brand.name}
+            {brand.name}{" "}
+            <button className="rm-btn" onClick={() => removeItem(brand.key)}>
+              X
+            </button>
           </li>
         ))}
       </ul>
@@ -24,7 +27,8 @@ const BrandsContainer = ({ brands, reset }) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  reset: () => dispatch(actions.reset())
+  reset: () => dispatch(actions.reset()),
+  removeItem: (key) => dispatch(actions.remove(key))
 });
 
 const mapStateToProps = state => ({
