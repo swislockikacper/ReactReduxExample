@@ -1,0 +1,17 @@
+div {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.list {
+    list-style: none;
+}
+
+.element {
+    padding-left: 0;
+}

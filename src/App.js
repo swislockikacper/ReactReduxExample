@@ -7,11 +7,11 @@ import CarsContainer from "./components/CarsContainer";
 
 function App() {
   return (
-    <div className="App">
-      <BrandForm />
+    <div className="app">
       <BrandsContainer />
-      <CarForm/>
+      <BrandForm />
       <CarsContainer />
+      <CarForm />
     </div>
   );
 }
