@@ -13,5 +13,12 @@ div {
 }
 
 .element {
-    padding-left: 0;
+    margin-left: -2.5rem;
+}
+
+.btn {
+    background: #fff;
+    width: 6rem;
+    height: 2rem;
+    font-weight: 700;
 }

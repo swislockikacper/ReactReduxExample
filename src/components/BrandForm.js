@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import actions from "../duck/brands/actions";
+import "./style/form.css";
 
 const BrandForm = ({ add }) => {
   const brandInput = React.createRef();
@@ -13,9 +14,9 @@ const BrandForm = ({ add }) => {
   };
 
   return (
-    <form onSubmit={addBrand}>
-      <input ref={brandInput} />
-      <button type="submit">Add brand</button>
+    <form className="form" onSubmit={addBrand}>
+      <input className="txt-input" ref={brandInput} />
+      <button className="accept-btn" type="submit">Add brand</button>
     </form>
   );
 };

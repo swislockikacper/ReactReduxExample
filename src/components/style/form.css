@@ -1,0 +1,14 @@
+.form {
+    margin-top: 1rem;
+}
+
+.txt-input {
+    border: 0.1rem solid #000;
+    width: 15rem;
+    height: 1.5rem;    
+}
+
+.accept-btn {
+    height: 1.8rem;
+    background: #fff;
+}
